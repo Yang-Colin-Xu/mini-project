@@ -9,7 +9,7 @@ int main(){
   float averages[NUM_STUDENTS];
   char grades[NUM_STUDENTS];
   //Input stdent information
-  for(int i = ; i < NUM_STUDENTS; i++) {
+  for(int i = 0; i < NUM_STUDENTS; i++) {
     printf("Enter name of student%d:", i + 1);
     scanf("%s", names[i]);
 
@@ -20,6 +20,7 @@ int main(){
     for (int j = 0; j < NUM_SUBJECTS; j++) {
         printf("Score for subject %d: ", j + 1);
         scanf("%d" , &scores[i][j]);
+        total += scores[i][j]
     }
     //calculate average score
   
@@ -37,9 +38,10 @@ int main(){
   //Results
   printf("\nStudent Grade:\n");
   for(int i = 0; i < NUM_STUDENTS; i++) {
-    printf("Name: %s\n", name[i]);
+    printf("Name: %s\n", names[i]);
     printf(" Average Score: %.2f\n", averages[i]);
     printf("Grade: %c\n\n", grades[i]);
+  }
     
   return 0; 
 }
